@@ -39,7 +39,8 @@
         .project-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: 0.3s; }
         .project-card:hover .project-image img { transform: scale(1.05); }
         .project-card h3 { font-size: 1.4rem; margin: 0.8rem 0; font-family: 'Playfair Display', serif; color: #f3cf7a; }
-        .project-card p { font-size: 0.85rem; margin: 0.5rem 0; color: #ccc; }
+        .project-card p { font-size: 0.85rem; margin: 0.5rem 0; color: #ccc; line-height: 1.4; }
+        .project-charm { display: inline-block; margin-top: 0.8rem; font-size: 0.75rem; background: rgba(243,207,122,0.2); padding: 0.2rem 0.8rem; border-radius: 20px; color: #f3cf7a; }
         .instruments-section { text-align: center; }
         .instrument-showcase { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2.5rem 0; }
         .instrument-item { text-align: center; transition: all 0.4s; cursor: pointer; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); min-width: 100px; }
@@ -134,25 +135,33 @@
     <section>
         <h2 class="section-title">🚀 Projetos Extraordinários</h2>
         <div class="projects-area">
+            <!-- Projeto 1: Instrumental -->
             <div class="project-card">
-                <div class="project-image"><img src="https://imgur.com/YoeXzRl.jpg" alt="CNC Guitar Workshop" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #c97e4a, #f3cf7a)'; this.parentElement.innerHTML='<div style=\'font-size:3rem;text-shadow:0 0 10px black;\'>🎸⚙️</div>'"></div>
-                <h3>CNC Guitar Workshop</h3>
-                <p>Usinagem CNC para corpos de guitarra + App React de controle de produção. Integração completa entre indústria 4.0 e luthieria digital.</p>
+                <div class="project-image"><img src="https://imgur.com/YoeXzRl.jpg" alt="Instrumental na Igreja" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #c97e4a, #f3cf7a)'; this.parentElement.innerHTML='<div style=\'font-size:3rem;text-shadow:0 0 10px black;\'>🎸🙏</div>'"></div>
+                <h3>🎵 INSTRUMENTAL 🎶</h3>
+                <p>Toco violão, guitarra e contrabaixo na igreja. Ministério de louvor com paixão e dedicação, levando música e adoração através dos meus instrumentos. Cada acorde é uma entrega, cada melodia uma conexão.</p>
+                <div class="project-charm">✨ "Onde a música encontra a fé" ✨</div>
             </div>
+            <!-- Projeto 2: Eletropneumática -->
             <div class="project-card">
-                <div class="project-image"><img src="https://imgur.com/UHhQxQb.jpg" alt="Smart Manufacturing Monitor" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #8b5a2b, #c97e4a)'; this.parentElement.innerHTML='<div style=\'font-size:3rem;text-shadow:0 0 10px black;\'>🏭📊</div>'"></div>
-                <h3>Smart Manufacturing Monitor</h3>
-                <p>Dashboard Java Spring para monitoramento de tornos CNC e fresadoras em tempo real. Otimização de produção com indicadores IoT.</p>
+                <div class="project-image"><img src="https://imgur.com/UHhQxQb.jpg" alt="Eletropneumática" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #8b5a2b, #c97e4a)'; this.parentElement.innerHTML='<div style=\'font-size:3rem;text-shadow:0 0 10px black;\'>💨⚡</div>'"></div>
+                <h3>💨 ELETROPNEUMÁTICA ⚡</h3>
+                <p>Projeto de automação industrial: acionamento de pistão pneumático por meio de eletroválvulas controladas por Arduino e código em C++. Sistema integra sensores de fim de curso, relés e interface de controle. Desenvolvimento de lógica de sequenciamento para movimentos de avanço e retorno do cilindro, com monitoramento em tempo real via display LCD.</p>
+                <div class="project-charm">🔧 "Ar + Eletricidade + Código = Movimento Perfeito" 🔌</div>
             </div>
+            <!-- Projeto 3: Metalúrgica & Automotiva -->
             <div class="project-card">
-                <div class="project-image"><img src="https://imgur.com/vwuFPIm.jpg" alt="Metalurgia & Soldagem" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #4a2a1a, #c97e4a)'; this.parentElement.innerHTML='<div style=\'font-size:3rem;text-shadow:0 0 10px black;\'>🔥🛠️</div>'"></div>
-                <h3>Metalurgia & Soldagem</h3>
-                <p>Trabalho prático em soldagem oxiacetilênica e técnicas avançadas de metalurgia industrial. Especialização em estruturas metálicas.</p>
+                <div class="project-image"><img src="https://imgur.com/vwuFPIm.jpg" alt="Corte com Maçarico" onerror="this.onerror=null; this.parentElement.style.background='linear-gradient(135deg, #4a2a1a, #c97e4a)'; this.parentElement.innerHTML='<div style=\'font-size:3rem;text-shadow:0 0 10px black;\'>🔥🛠️</div>'"></div>
+                <h3>🔥 METALÚRGICA & AUTOMOTIVA 🔥</h3>
+                <p>Na imagem estou realizando corte de chapa de aço com maçarico oxiacetilênico, técnica essencial na metalurgia pesada e reparos automotivos estruturais. Especialização em processos de oxicorte, soldagem e fabricação de componentes para sistemas de exaustão, chassis e reforços estruturais. Precisão e segurança em cada corte.</p>
+                <div class="project-charm">⚙️ "Onde o fogo molda o metal e o metal sustenta a estrada" 🚗</div>
             </div>
+            <!-- Projeto 4: AutoDiagnostic AI -->
             <div class="project-card">
                 <div class="project-image" id="img4"></div>
-                <h3>AutoDiagnostic AI</h3>
-                <p>Ferramenta Python com Machine Learning para diagnóstico automotivo via scanner OBD2. Análise preditiva de falhas em veículos.</p>
+                <h3>🤖 AUTODIAGNOSTIC AI 🚗</h3>
+                <p>Ferramenta Python com Machine Learning para diagnóstico automotivo via scanner OBD2. Análise preditiva de falhas em veículos, leitura de sensores e emissão de relatórios inteligentes. Integração com banco de dados de códigos de falha e recomendações de manutenção preventiva.</p>
+                <div class="project-charm">📊 "Tecnologia a serviço da confiabilidade automotiva" 🔍</div>
             </div>
         </div>
         <p style="margin-top: 2rem; color: #f3cf7a;">✨ Integrando tecnologia, indústria e música | +15 projetos realizados ✨</p>
@@ -444,10 +453,9 @@
     document.getElementById('keyboardBtn').addEventListener('click', () => playRealSound('keyboard'));
     document.getElementById('playGrooveBtn').addEventListener('click', () => playGroove());
 
-    // Configuração do quarto card com imagem personalizada e fallback
+    // Configurar imagens para os cards
     const img4Div = document.getElementById('img4');
     if (img4Div) {
-        // Criando imagem para o quarto card (imagem automotiva simbólica)
         const img = document.createElement('img');
         img.src = 'https://imgur.com/YoeXzRl.jpg';
         img.alt = 'AutoDiagnostic AI';
@@ -461,7 +469,6 @@
         img4Div.appendChild(img);
     }
 
-    // Garantir que os três primeiros cards carreguem as imagens corretamente
     const projectImages = document.querySelectorAll('.project-image');
     const imageUrls = [
         'https://imgur.com/YoeXzRl.jpg',
@@ -476,11 +483,9 @@
                 existingImg.src = imageUrls[idx];
                 existingImg.onerror = () => {
                     imgDiv.style.background = 'linear-gradient(135deg, #c97e4a, #f3cf7a)';
-                    imgDiv.innerHTML = `<div style="font-size:3rem;text-shadow:0 0 10px black;">${idx === 0 ? '🎸⚙️' : idx === 1 ? '🏭📊' : '🔥🛠️'}</div>`;
+                    imgDiv.innerHTML = `<div style="font-size:3rem;text-shadow:0 0 10px black;">${idx === 0 ? '🎸🙏' : idx === 1 ? '💨⚡' : '🔥🛠️'}</div>`;
                 };
             }
-        } else if (idx >= 3) {
-            // Quarto card já tratado
         }
     });
 
