@@ -41,6 +41,8 @@
         .project-card h3 { font-size: 1.4rem; margin: 0.8rem 0; font-family: 'Playfair Display', serif; color: #f3cf7a; }
         .project-card p { font-size: 0.85rem; margin: 0.5rem 0; color: #ccc; line-height: 1.4; }
         .project-charm { display: inline-block; margin-top: 0.8rem; font-size: 0.75rem; background: rgba(243,207,122,0.2); padding: 0.2rem 0.8rem; border-radius: 20px; color: #f3cf7a; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 0.8rem 0; }
+        .tech-badge { background: rgba(243,207,122,0.25); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.7rem; font-weight: 500; color: #f3cf7a; }
         .instruments-section { text-align: center; }
         .instrument-showcase { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2.5rem 0; }
         .instrument-item { text-align: center; transition: all 0.4s; cursor: pointer; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); min-width: 100px; }
@@ -69,7 +71,7 @@
 <div class="content">
     <section class="hero">
         <h1>LUIGI PERUCH</h1>
-        <div class="subtitle">✦ Developer | Metal Mechanic | Multi-Instrumentista ✦</div>
+        <div class="subtitle">✦ Developer | Metal Mechanic | Multi-Instrumentista | Tenho 17 Anos ✦</div>
         <div class="badge">🎸 2 anos Dev | ⚙️ Especialista em Usinagem e Solda | 🎹 Músico</div>
         <div class="contact-links">
             <div class="contact-item">📧 luigiperuch92@gmail.com</div>
@@ -91,7 +93,7 @@
             <div class="skill-card">☕ Java (Spring Boot, Hibernate)</div>
             <div class="skill-card">⚛️ React.js / Next.js / Redux</div>
             <div class="skill-card">🟨 JavaScript / TypeScript</div>
-            <div class="skill-card">🎨 HTML5, CSS3, Tailwind, Framer Motion</div>
+            <div class="skill-card">🎨 HTML, CSS, Tailwind, Framer Motion</div>
             <div class="skill-card">🐍 Python (Django, Flask, FastAPI)</div>
             <div class="skill-card">🗄️ PostgreSQL, MySQL, MongoDB</div>
             <div class="skill-card">🎸 Node.js / Express / GraphQL</div>
@@ -156,15 +158,23 @@
                 <p>Na imagem estou realizando corte de chapa de aço com maçarico oxiacetilênico, técnica essencial na metalurgia pesada e reparos automotivos estruturais. Especialização em processos de oxicorte, soldagem e fabricação de componentes para sistemas de exaustão, chassis e reforços estruturais. Precisão e segurança em cada corte.</p>
                 <div class="project-charm">⚙️ "Onde o fogo molda o metal e o metal sustenta a estrada" 🚗</div>
             </div>
-            <!-- Projeto 4: AutoDiagnostic AI -->
+            <!-- Projeto 4: Meu Portfólio Fullstack -->
             <div class="project-card">
                 <div class="project-image" id="img4"></div>
-                <h3>🤖 AUTODIAGNOSTIC AI 🚗</h3>
-                <p>Ferramenta Python com Machine Learning para diagnóstico automotivo via scanner OBD2. Análise preditiva de falhas em veículos, leitura de sensores e emissão de relatórios inteligentes. Integração com banco de dados de códigos de falha e recomendações de manutenção preventiva.</p>
-                <div class="project-charm">📊 "Tecnologia a serviço da confiabilidade automotiva" 🔍</div>
+                <h3>🌐 MEU PRIMEIRO SITE</h3>
+                <p>Desenvolvido com React para interfaces dinâmicas, Node.js no backend para API robusta, MySQL para gerenciamento de dados, além de HTML, CSS e JavaScript puro para animações e efeitos visuais impressionantes. O projeto integra Three.js para gráficos 3D, Web Audio API para interações musicais e um design responsivo que se adapta perfeitamente a qualquer dispositivo. </p>
+                <div class="tech-stack">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">React.js</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">MySQL</span>
+                </div>
+                <div class="project-charm">✨ "Full Stack na prática: do frontend ao banco de dados" 🚀</div>
             </div>
         </div>
-        <p style="margin-top: 2rem; color: #f3cf7a;">✨ Integrando tecnologia, indústria e música | +15 projetos realizados ✨</p>
+        <p style="margin-top: 2rem; color: #f3cf7a;">✨ Integrando tecnologia, indústria e música | +10 projetos realizados ✨</p>
     </section>
 
     <section class="instruments-section">
@@ -453,18 +463,20 @@
     document.getElementById('keyboardBtn').addEventListener('click', () => playRealSound('keyboard'));
     document.getElementById('playGrooveBtn').addEventListener('click', () => playGroove());
 
-    // Configurar imagens para os cards
+    // Configurar imagem para o projeto do site pessoal - Foto sobre site/desenvolvimento web
     const img4Div = document.getElementById('img4');
     if (img4Div) {
         const img = document.createElement('img');
-        img.src = 'https://imgur.com/YoeXzRl.jpg';
-        img.alt = 'AutoDiagnostic AI';
+        // Usando uma imagem temática de desenvolvimento web/código
+        img.src = 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop';
+        img.alt = 'Meu Portfólio Fullstack - Desenvolvimento Web';
         img.style.width = '100%';
         img.style.height = '100%';
         img.style.objectFit = 'cover';
         img.onerror = () => {
-            img4Div.style.background = 'linear-gradient(135deg, #2a1a2a, #c97e4a)';
-            img4Div.innerHTML = '<div style="font-size:3rem;text-shadow:0 0 10px black;">🚗🤖</div>';
+            // Fallback caso a imagem não carregue
+            img4Div.style.background = 'linear-gradient(135deg, #0a2a3a, #1a4a6e)';
+            img4Div.innerHTML = '<div style="font-size:3rem;text-shadow:0 0 10px black;">🌐💻</div><div style="font-size:0.7rem; margin-top:5px;">Code & Design</div>';
         };
         img4Div.appendChild(img);
     }
